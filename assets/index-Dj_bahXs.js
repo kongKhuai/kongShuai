@@ -1,0 +1,1 @@
+import{d as t,o,c as s,a as e}from"./index-CvuYYENq.js";const n=""+new URL("工作汇报-j0qKQjSh.svg",import.meta.url).href,r=e("img",{src:n,alt:"",width:"200",height:"200"},null,-1),i=e("svg",null,[e("rect",{width:"100",height:"80",fill:"red",stroke:"green","stroke-width":"8"})],-1),c=[r,i],h=t({__name:"index",setup(_){return(a,l)=>(o(),s("div",null,c))}});export{h as default};
