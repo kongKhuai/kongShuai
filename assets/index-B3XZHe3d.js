@@ -1,0 +1,1 @@
+import{n as e,o as n,c as i}from"./index-CpEHNvOP.js";const p=e({__name:"index",setup(a){return(t,o)=>(n(),i("div",null," pinia-plugin-persistedstate 是一个 Pinia 的持久化插件，看这个库的源码主要是好奇它是怎么给 Pinia 做持久化的，并且学习怎么去开发一个 Pinia 插件，源码很少，就几个文件 "))}});export{p as default};
