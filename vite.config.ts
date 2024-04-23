@@ -2,7 +2,7 @@
  * @Author: 16651618507@163.com
  * @Date: 2024-04-01 21:52:49
  * @LastEditors: 16651618507@163.com
- * @LastEditTime: 2024-04-18 00:00:21
+ * @LastEditTime: 2024-04-23 23:23:37
  * @FilePath: \new-plus\vite.config.ts
  * @Description:
  *
@@ -25,7 +25,7 @@ const pathSrc = path.resolve(__dirname, 'src')
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: './',
+  base: '/kongShuai/',
   plugins: [
     vue(),
     VueDevTools(),
