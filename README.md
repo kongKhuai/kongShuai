@@ -1,9 +1,13 @@
+<!-- https://github.com/kyechan99/capsule-render -->
 <p align="center">
 <img src="https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=300&&section=header&text=HI%20你好!&fontSize=90&fontAlign=50&fontAlignY=30&desc=欢迎来到我的首页!&descAlign=50&descSize=30&descAlignY=60&animation=twinkling" />
 </p>
 <p>
+<!-- https://github.com/DenverCoder1/readme-typing-svg -->
+
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&random=false&width=435&lines=I'm+Kong+Shuai%EF%BC%8C%E5%96%9C%E6%AC%A2%E8%BF%99%E4%B8%AA%E4%B8%BB%E9%A1%B5%E5%90%97%EF%BC%9F)](https://git.io/typing-svg)
 ![Dusai's GitHub stats](https://github-readme-stats.vercel.app/api?username=kongShuai)
+
 </p>
 <p>
 GitHub 数据概览
@@ -28,9 +32,13 @@ GitHub 数据概览
 <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=kongShuai&theme=transparent&hide_border=true&layout=donut-vertical&langs_count=6" />
 </p>
 <br />
+
+<!-- https://github.com/tandpfun/skill-icons -->
 <p align="center">
 <img align="center" src="https://skillicons.dev/icons?i=html,css,js,ts,md,vue,uniapp,arkts,arkui&theme=light" />
 </p>
+
+<!-- https://github.com/badges/shields -->
 
 <p align="center">
 <a href="https://github.com/kongShuai"><img src="https://img.shields.io/badge/GitHub-kongShuai-blue?logo=github" /></a>
@@ -81,6 +89,7 @@ npm run build
 npm run lint
 ```
 
+<!-- https://github.com/kyechan99/capsule-render -->
 <p align="center">
-<img src="https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=300&&section=footer&text={TITLE}&fontSize=90&fontAlign=50&fontAlignY=70&desc={SUB_TITLE}&descAlign=50&descSize=30&descAlignY=40&animation=twinkling" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=300&&section=footer&text=THE%20END!&fontSize=90&fontAlign=50&fontAlignY=70&desc=Hope%20your%20program%20is%20bug-free!&descAlign=50&descSize=30&descAlignY=40&animation=twinkling" />
 </p>
