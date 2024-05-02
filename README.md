@@ -6,11 +6,12 @@
 <!-- https://github.com/DenverCoder1/readme-typing-svg -->
 
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&random=false&width=435&lines=I'm+Kong+Shuai%EF%BC%8C%E5%96%9C%E6%AC%A2%E8%BF%99%E4%B8%AA%E4%B8%BB%E9%A1%B5%E5%90%97%EF%BC%9F)](https://git.io/typing-svg)
-![Dusai's GitHub stats](https://github-readme-stats.vercel.app/api?username=kongShuai)
 
 </p>
 <p>
 GitHub 数据概览
+![Dusai's GitHub stats](https://github-readme-stats.vercel.app/api?username=kongShuai)
+
 <br />
 
 [github pages](https://kongkhuai.github.io/kongShuai/)
