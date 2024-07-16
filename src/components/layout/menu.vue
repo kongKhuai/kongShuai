@@ -2,7 +2,7 @@
  * @Author: 16651618507@163.com
  * @Date: 2024-04-14 22:10:10
  * @LastEditors: 16651618507@163.com
- * @LastEditTime: 2024-04-15 14:14:40
+ * @LastEditTime: 2024-04-18 10:49:22
  * @FilePath: \new-plus\src\components\layout\menu.vue
  * @Description: 
  * 
@@ -20,30 +20,30 @@
       <!-- :background-color="sidebar.bgColor" -->
       <template v-for="(item, index) in menulist">
         <template v-if="item.children">
-          <el-sub-menu :index="item.path" :key="index" v-permiss="item.name">
+          <el-sub-menu :index="item.path" :key="index" v-permiss="item?.meta?.title || item.name">
             <template #title>
               <el-icon v-if="item?.meta?.icon">
                 <component :is="item?.meta.icon"></component>
               </el-icon>
-              <span>{{ item.name }}</span>
+              <span>{{ item?.meta?.title || item.name }}</span>
             </template>
             <template v-for="(subItem, subItemIndex) in item.children">
               <el-sub-menu
                 v-if="subItem.children"
-                :index="item.path + subItem.path"
+                :index="`${item.path}/${subItem.path}`"
                 :key="index + '-' + subItemIndex"
-                v-permiss="item.name"
+                v-permiss="item?.meta?.title || item.name"
               >
-                <template #title>{{ subItem.name }}</template>
+                <template #title>{{ subItem?.meta?.title || subItem.name }}</template>
                 <el-menu-item
                   v-for="(threeItem, i) in subItem.children"
                   :key="i"
-                  :index="item.path + subItem.path + threeItem.path"
+                  :index="`${item.path}/${subItem.path}/${threeItem.path}`"
                 >
-                  {{ threeItem.name }}
+                  {{ threeItem?.meta?.title || threeItem.name }}
                 </el-menu-item>
               </el-sub-menu>
-              <el-menu-item v-else :index="item.path + subItem.path" v-permiss="item.name">
+              <el-menu-item v-else :index="`${item.path}/${subItem.path}`" v-permiss="item.name">
                 {{ subItem.meta?.title }}
               </el-menu-item>
             </template>
@@ -85,12 +85,9 @@ const router = useRouter()
 const route = useRoute()
 const menulist = computed(() => {
   return router.options.routes.filter((v: any) => {
-    return v.meta.isShow
+    return v.meta.isShow && v.path !== '/'
   })
 })
-console.log('%c Line:9 🍪 menulist', 'color:#3f7cff', router)
-console.log('%c Line:9 🍪 menulist', 'color:#3f7cff', route)
-console.log('%c Line:9 🍪 menulist', 'color:#3f7cff', menulist)
 const onRoutes = computed(() => {
   return route.path
 })

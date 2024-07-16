@@ -2,7 +2,7 @@
  * @Author: 16651618507@163.com
  * @Date: 2024-04-08 14:00:17
  * @LastEditors: 16651618507@163.com
- * @LastEditTime: 2024-04-15 14:15:08
+ * @LastEditTime: 2024-04-19 10:46:09
  * @FilePath: \new-plus\src\views\layout\layoutOne.vue
  * @Description: 
  * 
@@ -14,16 +14,18 @@
         <logo></logo>
       </div>
       <div class="menu flex-1 pb-2">
+        <!-- <el-scrollbar height="calc(100vh - 100px)"> -->
         <menu-list modeType="horizontal" />
+        <!-- </el-scrollbar> -->
       </div>
       <div class="flex flex-items-center">
         <!-- 设置 -->
         <layoutSetting />
-        <img :src="userImg" alt="" class="userImg ml-0.5rem border-rd" />
+        <img :src="userImg" alt="user头像" class="userImg w-3rem h-3rem ml-0.5rem border-rd" />
       </div>
     </el-header>
     <el-container>
-      <el-aside width="200px">Aside</el-aside>
+      <!-- <el-aside width="200px">Aside</el-aside> -->
       <el-main>
         <RouterView />
       </el-main>
@@ -49,12 +51,13 @@ import layoutSetting from './setting.vue'
   border-radius: 8px;
   overflow: hidden;
   background-color: var(--ba-bg-color-overlay);
+  margin: 10px 0;
 }
 /* html .dark :where(.el-aside, .el-header, .el-main) {
   background-color: var(--el-color-black) !important;
 } */
 .el-header {
-  margin-bottom: 10px;
+  margin: 10px;
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -67,10 +70,24 @@ import layoutSetting from './setting.vue'
 .el-aside {
   margin-right: 10px;
 }
+.el-main {
+  padding: 10px;
+  margin: 0 10px;
+  height: calc(100vh - 90px);
+  overflow-y: auto;
+}
+.el-page-container {
+  height: 100%;
+  overflow: hidden;
+}
 .userImg {
-  width: 3rem;
-  height: 3rem;
-  /* border-radius: 50%; */
+  border-radius: 50%;
+  border: 2px solid var(--ba-bg-color-overlay);
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.el-page-container {
+  overflow-y: auto;
 }
 .userImg:hover {
   transform: rotate(666turn);

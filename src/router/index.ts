@@ -2,7 +2,7 @@
  * @Author: 16651618507@163.com
  * @Date: 2024-04-01 21:52:49
  * @LastEditors: 16651618507@163.com
- * @LastEditTime: 2024-04-16 08:27:16
+ * @LastEditTime: 2024-04-18 22:30:11
  * @FilePath: \new-plus\src\router\index.ts
  * @Description:
  *
@@ -10,10 +10,35 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import layout from '../views/layout/index.vue'
 import login from '../views/login/index.vue'
-
+import home from '../views/login/home.vue'
+import ecology from './ecology'
+import canvas from './canvas'
+import echarts from './echarts'
+import svg from './svg'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
+    {
+      path: '/',
+      name: 'home',
+      redirect: '/eCharts/datavReportDev',
+      component: layout,
+      meta: {
+        title: '首页',
+        isShow: true
+      },
+      children: [
+        {
+          path: 'home',
+          name: 'homePage',
+          component: home,
+          meta: {
+            title: '首页',
+            isShow: true
+          }
+        }
+      ]
+    },
     {
       path: '/login',
       name: 'login',
@@ -24,12 +49,16 @@ const router = createRouter({
       },
       children: []
     },
+    ...ecology,
+    ...canvas,
+    ...echarts,
+    ...svg,
     {
-      path: '/',
-      name: 'home',
+      path: '/other',
+      name: 'other',
       component: layout,
       meta: {
-        title: '/',
+        title: '其他',
         isShow: true
       },
       children: [
@@ -44,15 +73,6 @@ const router = createRouter({
             title: '关于',
             isShow: true
           }
-        },
-        {
-          path: 'svg',
-          name: 'svg',
-          meta: {
-            title: 'svg测试',
-            isShow: true
-          },
-          component: () => import('../views/svg/index.vue')
         },
         {
           path: 'icon',

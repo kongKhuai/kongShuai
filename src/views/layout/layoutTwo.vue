@@ -2,22 +2,24 @@
  * @Author: 16651618507@163.com
  * @Date: 2024-04-08 14:01:29
  * @LastEditors: 16651618507@163.com
- * @LastEditTime: 2024-04-15 23:52:59
- * @FilePath: \new-plus\src\views\layout\layoutTwo.vue
+ * @LastEditTime: 2024-07-16 18:57:18
+ * @FilePath: \kongShuai\src\views\layout\layoutTwo.vue
  * @Description: 
  * 
 -->
 <template>
   <el-container class="el-page-container">
     <el-aside width="200px">
-      <img :src="logo" class="h-60px text-center m-0-auto b-rd-8px" alt="" style="width: 100%" />
-      <menu-list />
+      <!-- <img :src="logo" class="h-60px text-center m-0-auto b-rd-8px" alt="" style="width: 100%" /> -->
+      <el-scrollbar height="calc(100vh - 120px)">
+        <menu-list />
+      </el-scrollbar>
     </el-aside>
     <el-container>
       <el-header class="flex flex-justify-end flex-items-center">
         <!-- 设置 -->
         <layoutSetting />
-        <img :src="userImg" alt="" class="w-3rem h-3rem ml-0.5rem border-rd" />
+        <img :src="userImg" alt="" class="w-3rem h-3rem userImg ml-0.5rem border-rd" />
       </el-header>
       <el-main>
         <RouterView />
@@ -43,6 +45,7 @@ import userImg from '@/assets/user/avatar.png'
   border-radius: 8px;
   overflow: hidden;
   background-color: var(--ba-bg-color-overlay);
+  margin: 10px 0;
 }
 /* html .dark :where(.el-aside, .el-header, .el-main) {
   background-color: var(--el-color-black) !important;
@@ -53,5 +56,23 @@ import userImg from '@/assets/user/avatar.png'
 }
 .el-aside {
   margin-right: 10px;
+  overflow: hidden;
+  height: calc(100vh - 40px);
+}
+.el-main {
+  padding: 10px;
+  overflow-y: auto;
+  height: calc(100vh - 90px);
+  margin-top: 0;
+}
+.userImg {
+  transition: all 0.5s ease-in-out;
+}
+.userImg:hover {
+  transform: rotate(666turn);
+  transition-delay: 1s;
+  transition-property: all;
+  transition-duration: 59s;
+  transition-timing-function: cubic-bezier(0.34, 0, 0.84, 1);
 }
 </style>

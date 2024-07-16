@@ -1,3 +1,12 @@
+/*
+ * @Author: 16651618507@163.com
+ * @Date: 2024-07-16 18:31:13
+ * @LastEditors: 16651618507@163.com
+ * @LastEditTime: 2024-07-16 18:54:34
+ * @FilePath: \kongShuai\vite.config.ts
+ * @Description:
+ *
+ */
 import { fileURLToPath, URL } from 'node:url'
 
 import { defineConfig } from 'vite'
@@ -13,7 +22,6 @@ import UnoCSS from 'unocss/vite'
 
 import path from 'path'
 const pathSrc = path.resolve(__dirname, 'src')
-console.log('%c Line:12 🌽 pathSrc', 'color:#2eafb0', pathSrc)
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -26,7 +34,7 @@ export default defineConfig({
       // Auto import functions from Vue, e.g. ref, reactive, toRef...
       // 自动导入 Vue 相关函数，如：ref, reactive, toRef 等
       imports: ['vue'],
-
+      ignore: ['h'],
       // Auto import functions from Element Plus, e.g. ElMessage, ElMessageBox... (with style)
       // 自动导入 Element Plus 相关函数，如：ElMessage, ElMessageBox... (带样式)
       resolvers: [

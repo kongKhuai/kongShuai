@@ -2,7 +2,7 @@
  * @Author: 16651618507@163.com
  * @Date: 2024-04-01 22:14:11
  * @LastEditors: 16651618507@163.com
- * @LastEditTime: 2024-04-15 23:48:31
+ * @LastEditTime: 2024-04-18 22:37:29
  * @FilePath: \new-plus\src\views\layout\index.vue
  * @Description: 
  * 
@@ -10,6 +10,10 @@
 
 <template>
   <div class="common-layout">
+    <!-- 页面容器 -->
+    <!-- <el-container>
+      <router-view></router-view>
+    </el-container> -->
     <!-- 页面 -->
     <component :data-layout="settingInfo.layoutNmae" :is="layoutTheme"></component>
   </div>

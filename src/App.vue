@@ -2,12 +2,16 @@
  * @Author: 16651618507@163.com
  * @Date: 2024-04-01 21:52:49
  * @LastEditors: 16651618507@163.com
- * @LastEditTime: 2024-04-08 23:35:20
+ * @LastEditTime: 2024-04-17 21:15:31
  * @FilePath: \new-plus\src\App.vue
  * @Description: 
  * 
 -->
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useRoute } from 'vue-router'
+const route = useRoute()
+console.log(route)
+</script>
 
 <template>
   <RouterView />
